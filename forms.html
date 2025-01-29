@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign UP!</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="formScript.js"></script>
+<style>
+    body{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 20pt;
+        color: white;
+        background-image: url('john_b2.webp');
+        background-size: 100%;
+        background-attachment: fixed;
+        margin: 20px;
+        text-align: center;
+    }
+    span{
+        background-color: powderblue;
+    }
+    input{
+        font-size: large;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background-color:lightpink;
+    }
+    button{
+        width: 100px; 
+        height: 50px;
+        background-color: aqua;
+        color: white;
+        font-size: large;
+    }
+</style>
+</head>
+<body>
+        <a style="background:transparent; color: white;" href="index.html">Home</a>
+    <h1>Sign up for our courses!</h1>
+    <form id="myForm">
+        <label for="fName">First name:</label>&nbsp;&nbsp;&nbsp;
+        <input type="text" id="fName" name="First Name"><br><br>
+        <label for="lName">Last name:</label>&nbsp;&nbsp;&nbsp;
+        <input type="text" id="lName" name="Last Name"><br><br>
+        <label for="email">E-mail:</label>&nbsp;&nbsp;&nbsp;
+        <input type="email" id="email" name="E-mail" value="@gmail.com"><br><br>
+        <label for="date">Birth date:</label>&nbsp;&nbsp;&nbsp;
+        <input type="date" id="date" name="Birth Date"><br><br>
+        <label for="plan">Choose your plan:</label><br><br>
+        <label for="1year">1 Year Subscription</label>
+        <input type="radio" name="Plan" value="1 year"><br><br>
+        <label for="6month">6 Month Subscription</label>
+        <input type="radio" name="Plan" value="6 months"><br><br>
+        <label for="3month">3 Month Subscription</label>
+        <input type="radio" name="Plan" value="3 months"><br><br>
+        <label for="typePick">Pick a type for your learning bass!</label><br><br>
+        <label for="4string">4 String Bass</label>
+        <input type="radio" name="Type" value="4 strings"><br><br>
+        <label for="5string">5 String Bass</label>
+        <input type="radio" name="Type" value="5 strings"><br><br>
+        <label for="brands">Pick a brand for your learning bass!</label><br><br>
+        <input type="text" list="brand" id="brands" name="Brand" placeholder="Start typing..."><br><br>
+        <datalist id="brand">
+            <option value="Ibanez">Ibanez</option>
+            <option value="Fender">Fender</option>
+            <option value="Cort">Cort</option>
+            <option value="Harley Benton">Harley Benton</option>
+            <option value="ESP">ESP</option>
+        </datalist>
+        <label for="colorPick">Pick a color for your learning bass!</label>
+        <input type="color" id="Color" name="Color"><br><br>
+        <label for="teacherPick">Pick your educators!</label><br><br>
+        <label for="1e">Alex Webster</label>
+        <input type="checkbox" name="Educators" value="Alex Webster">
+        <label for="2e">Cliff Burton</label>
+        <input type="checkbox" name="Educators" value="Cliff Burton">
+        <label for="3e">Flea</label>
+        <input type="checkbox" name="Educators" value="Flea">
+        <label for="4e">John Myung</label>
+        <input type="checkbox" name="Educators" value="John Myung">
+        <label for="5e">Willie Dixon</label>
+        <input type="checkbox" name="Educators" value="Willie Dixon"><br><br><br>
+        <button type="button" onclick="submitForm()"><b>Sign up!</b></button>
+    </form>
+</body>
+<script>
+    function submitForm() {
+    var form = document.getElementById("myForm");
+    var formData = new FormData(form);
+
+    var result = "Check your data:\n";
+
+    for (const entry of formData.entries()) {
+        result += `${entry[0]}: ${entry[1]}\n`;
+    }
+
+    alert(result);
+}
+</script>
+</html>

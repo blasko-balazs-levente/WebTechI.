@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B|B Bazsa's Bass Webshop</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <body background="bg3.webp"></body>
+  <nav class="navbar navbar-expand-lg bg-light">
+    <nav class="navbar bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="me.html">
+          <img src="logo.jpg" alt="Logo" width="60" height="64" class="d-inline-block align-text-mid">
+          B||||B
+        </a>
+      </div>
+    </nav>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <nav class="navbar bg-light">
+              <form class="container-fluid justify-content-start">
+                <a href = "index.html"><button class="btn btn-outline-success me-2 active" type="button">Home</button>
+              </form>
+            </nav>
+            <nav class="navbar bg-light">
+              <form class="container-fluid justify-content-start">
+                <a href = "bassguitars.html"><button class="btn btn-outline-success me-2" type="button">Bass Guitars</button></a>
+              </form>
+            </nav>
+            <nav class="navbar bg-light">
+              <form class="container-fluid justify-content-start">
+                <a href = "basslessons.html"><button class="btn btn-outline-success me-2" type="button">Bass Lessons</button></a>
+              </form>
+            </nav>
+            
+          </ul>
+          
+        </div>
+      </div>
+    </nav>
+    <section class="container">
+    <div class="card text-light">
+      <img src="flea_b.jpg" class="card-img" alt="alex_b">
+      <div class="card-img-overlay">
+        <h5 class="card-title">Fender Flea</h5>
+        <p class="card-text">Signature Bass Of Flea</p>
+      </div>
+    </div>
+    </section>
+    <section class="container" style="top: +850px;">
+      <!-- Videó beágyazása -->
+    <video id="myVideo" width="640" height="360" controls>
+      <source src="y2mate.bz - Flea Introduces the Fender Signature Flea Bass _ Artist Signature Series _ Fender.mp4" type="video/mp4">
+      A böngésződ nem támogatja a videó lejátszást.
+  </video>
+
+  <!-- Vezérlő gombok -->
+  <div>
+    <button onclick="playPause()"><span></span>Play/Pause</button>
+    <button onclick="skipForward()"><span></span>Skip Backward 10s</button>
+      <button onclick="skipBackward()"><span></span>Skip Forward 10s</button>
+      <button onclick="toggleFullScreen()"><span></span>Fullscreen</button>
+  </div>
+    </section>
+    <div class="btn-group">
+      <a href="ab.html" class="btn btn-outline-light">Alex Webster Signature Bass</a>
+      <a href="cb.html" class="btn btn-outline-light">Cliff Burton Signature Bass</a>
+      <a href="fb.html" class="btn btn-outline-light active" aria-current="page">Flea Signature Bass</a>
+      <a href="jb.html" class="btn btn-outline-light">John Myung Signature Bass</a>
+    </div>
+    <div style="font-size: x-large; color: aliceblue;">Learn more about this epic signature bass guitar! <a href="https://www.fender.com/en-US/flea-signature-bass">Click here!</a></div>
+</body>
+<script>
+  var myVideo = document.getElementById("myVideo");
+
+  function playPause() {
+      if (myVideo.paused)
+          myVideo.play();
+      else
+          myVideo.pause();
+  }
+
+  function toggleFullScreen() {
+            if (!document.fullscreenElement && !document.webkitFullscreenElement &&
+                !document.mozFullScreenElement && !document.msFullscreenElement) {
+                if (myVideo.requestFullscreen) {
+                    myVideo.requestFullscreen();
+                } else if (myVideo.webkitRequestFullscreen) { /* Safari felhasználók */
+                    myVideo.webkitRequestFullscreen();
+                } else if (myVideo.mozRequestFullScreen) { /* Firefox felhasználók */
+                    myVideo.mozRequestFullScreen();
+                } else if (myVideo.msRequestFullscreen) { /* Internet Explorer felhasználók */
+                    myVideo.msRequestFullscreen();
+                }
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.webkitExitFullscreen) {
+                    document.webkitExitFullscreen();
+                } else if (document.mozCancelFullScreen) {
+                    document.mozCancelFullScreen();
+                } else if (document.msExitFullscreen) {
+                    document.msExitFullscreen();
+                }
+            }
+  }
+  function skipForward() {
+            myVideo.currentTime += 10;
+        }
+  function skipBackward() {
+            myVideo.currentTime -= 10;
+        }
+
+</script>
+</html>

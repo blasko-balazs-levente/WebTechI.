@@ -1,0 +1,76 @@
+{
+  "Bass lessons": {
+    "courses": [
+      {
+        "Teacher":"Alex Webster",
+        "Date": {
+          "Day": "Monday",
+          "Time": "4 p.m."
+        },
+        "Location": {
+          "Street": "Kis Ernő utca",
+          "City": "Miskolc",
+          "Postcode": "3532"
+        },
+        "Price": "20,000 JMF",
+        "PhoneNumber": "06/20 123-4567"
+      },
+      {
+        "Teacher":"Cliff Burton",
+        "Date": {
+          "Day": "Tuesday",
+          "Time":"1 p.m."
+        },
+        "Location": {
+          "Street": "Kis Ernő utca",
+          "City": "Miskolc",
+          "Postcode": "3532"
+        },
+        "Price": "20,000 JMF",
+        "PhoneNumber": "06/20 123-4567"
+      },
+      {
+        "Teacher":"Flea",
+        "Date": {
+          "Day":"Wednesday",
+          "Time":"10 a.m."
+        },
+        "Location": {
+          "Street": "Kis Ernő utca",
+          "City": "Miskolc",
+          "Postcode": "3532"
+        },
+        "Price": "20,000 JMF",
+        "PhoneNumber": "06/20 123-4567"
+      },
+      {
+        "Teacher":"John Myung",
+        "Date": {
+          "Day":"Thursday",
+          "Time":"2 p.m."
+        },
+        "Location": {
+          "Street": "Kis Ernő utca",
+          "City": "Miskolc",
+          "Postcode": "3532"
+        },
+        "Price": "20,000 JMF",
+        "PhoneNumber": "06/20 123-4567"
+      },
+      {
+        "Teacher":"Willie Dixon",
+        "Date": {
+          "Day":"Friday",
+          "Time":"8 a.m."
+        },
+        "Location": {
+          "Street": "Kis Ernő utca",
+          "City": "Miskolc",
+          "Postcode": "3532"
+        },
+        "Price": "20,000 JMF",
+        "PhoneNumber": "06/20 123-4567"
+      }
+    ]
+  }
+}
